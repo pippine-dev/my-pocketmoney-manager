@@ -13,6 +13,47 @@ class SpendingDao {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let dateUtils = DateUtils()
     
+    public func getAll() -> [Spending] {
+        do {
+            let fetchRequest = Spending.fetchRequest()
+            fetchRequest.sortDescriptors = [
+                NSSortDescriptor(key: "year", ascending: true),
+                NSSortDescriptor(key: "month", ascending: true),
+                NSSortDescriptor(key: "day", ascending: true)]
+            
+            let spendings = try context.fetch(Spending.fetchRequest())
+            
+            return spendings
+        } catch {
+            print("error")
+        }
+        return []
+    }
+    
+    public func getAllYear() -> [Int16] {
+        var result: [Int16] = []
+        
+        let spendings = getAll()
+        for spending in spendings {
+            if !result.contains(spending.year) {
+                result.append(spending.year)
+            }
+        }
+        return result
+    }
+    
+    public func getAllMonth() -> [Int16] {
+        var result: [Int16] = []
+        
+        let spendings = getAll()
+        for spending in spendings {
+            if !result.contains(spending.month) {
+                result.append(spending.month)
+            }
+        }
+        return result
+    }
+    
     public func getTotalAmountThisMonth() -> Int {
         let today = Date()
         

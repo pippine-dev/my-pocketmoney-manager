@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1FDBFB28A8781B00F24114 /* HistoryYearUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1FDBFA28A8781B00F24114 /* HistoryYearUITableViewController.swift */; };
 		2E625D5D28A1EFC40007CD54 /* RegisterMoneyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E625D5C28A1EFC40007CD54 /* RegisterMoneyTableViewController.swift */; };
 		2E625D5F28A207CD0007CD54 /* RegisterMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E625D5E28A207CD0007CD54 /* RegisterMoneyViewController.swift */; };
 		2E625D7A28A21C160007CD54 /* SpendingDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E625D7928A21C160007CD54 /* SpendingDao.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		0C5E8F5CE39EFF1EF3293036 /* Pods-MyPocketMoneyManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPocketMoneyManager.release.xcconfig"; path = "Target Support Files/Pods-MyPocketMoneyManager/Pods-MyPocketMoneyManager.release.xcconfig"; sourceTree = "<group>"; };
+		2E1FDBFA28A8781B00F24114 /* HistoryYearUITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryYearUITableViewController.swift; sourceTree = "<group>"; };
 		2E625D5C28A1EFC40007CD54 /* RegisterMoneyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMoneyTableViewController.swift; sourceTree = "<group>"; };
 		2E625D5E28A207CD0007CD54 /* RegisterMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMoneyViewController.swift; sourceTree = "<group>"; };
 		2E625D7928A21C160007CD54 /* SpendingDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingDao.swift; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E1FDBF928A8772B00F24114 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				2E1FDBFA28A8781B00F24114 /* HistoryYearUITableViewController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		2E713F0528A0A84200D3C7E8 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				2EB55BB528A2584800D3F948 /* RegisterTab */,
+				2E1FDBF928A8772B00F24114 /* History */,
 				2EB55BB428A2581E00D3F948 /* SettingTab */,
 			);
 			path = ViewController;
@@ -279,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E625D5F28A207CD0007CD54 /* RegisterMoneyViewController.swift in Sources */,
+				2E1FDBFB28A8781B00F24114 /* HistoryYearUITableViewController.swift in Sources */,
 				2E713F1228A0A84200D3C7E8 /* AppDelegate.swift in Sources */,
 				2EE0886828A1DE80006FF758 /* TagDao.swift in Sources */,
 				2E713F3128A0C96A00D3C7E8 /* TagListTableViewController.swift in Sources */,
@@ -435,7 +447,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6KK4X5W5E4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyPocketMoneyManager/Info.plist;
@@ -450,7 +462,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.pippine.app.MyPocketMoneyManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -466,7 +478,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6KK4X5W5E4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyPocketMoneyManager/Info.plist;
@@ -481,7 +493,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.pippine.app.MyPocketMoneyManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
