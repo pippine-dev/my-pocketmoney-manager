@@ -1,16 +1,17 @@
 //
-//  HistoryYearUITableViewController.swift
+//  HistoryMonthUITableViewController.swift
 //  MyPocketMoneyManager
 //
-//  Created by daisuke tsurimoto on 2022/08/14.
+//  Created by daisuke tsurimoto on 2022/08/21.
 //
 
 import UIKit
 import NendAd
 
-class HistoryYearUITableViewController: UITableViewController {
+class HistoryMonthUITableViewController: UITableViewController {
 
-    var yearList: [Int16] = []
+    var targetYear: Int16 = 0
+    var monthList: [Int16] = []
     
     let spendingDao = SpendingDao()
     
@@ -28,12 +29,12 @@ class HistoryYearUITableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return yearList.count
+        return monthList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "YearCell", for: indexPath)
-        cell.textLabel?.text = String(yearList[indexPath.row]) + "年"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MonthCell", for: indexPath)
+        cell.textLabel?.text = String(monthList[indexPath.row]) + "月"
         return cell
     }
 
@@ -43,12 +44,13 @@ class HistoryYearUITableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let indexPath = self.tableView.indexPathForSelectedRow
-        let nextView = segue.destination as! HistoryMonthUITableViewController
-        nextView.targetYear = yearList[indexPath!.row]
+        let nextView = segue.destination as! SpendingDetailViewController
+        nextView.targetMonth = monthList[indexPath!.row]
+        nextView.targetYear = targetYear
     }
     
     func reloadData() {
-        yearList = spendingDao.getAllYear()
+        monthList = spendingDao.getAllMonth(year: targetYear)
         tableView.reloadData()
     }
 

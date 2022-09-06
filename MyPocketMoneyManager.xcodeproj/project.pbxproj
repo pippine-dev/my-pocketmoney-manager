@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E1FDBFB28A8781B00F24114 /* HistoryYearUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1FDBFA28A8781B00F24114 /* HistoryYearUITableViewController.swift */; };
+		2E59BD4328B1B7DB008B5A6F /* SpendingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59BD4228B1B7DB008B5A6F /* SpendingDetailViewController.swift */; };
 		2E625D5D28A1EFC40007CD54 /* RegisterMoneyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E625D5C28A1EFC40007CD54 /* RegisterMoneyTableViewController.swift */; };
 		2E625D5F28A207CD0007CD54 /* RegisterMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E625D5E28A207CD0007CD54 /* RegisterMoneyViewController.swift */; };
 		2E625D7A28A21C160007CD54 /* SpendingDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E625D7928A21C160007CD54 /* SpendingDao.swift */; };
@@ -21,6 +22,8 @@
 		2E713F3128A0C96A00D3C7E8 /* TagListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E713F3028A0C96A00D3C7E8 /* TagListTableViewController.swift */; };
 		2EB55BB328A247D500D3F948 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB55BB228A247D500D3F948 /* SettingTableViewController.swift */; };
 		2EB55BC028A34E6800D3F948 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB55BBF28A34E6800D3F948 /* DateUtils.swift */; };
+		2EBE77F328C34B89002E8CD4 /* SpendingDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBE77F228C34B89002E8CD4 /* SpendingDto.swift */; };
+		2ED144D628B1B1A900F2F762 /* HistoryMonthUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED144D528B1B1A900F2F762 /* HistoryMonthUITableViewController.swift */; };
 		2EE0886828A1DE80006FF758 /* TagDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE0886728A1DE80006FF758 /* TagDao.swift */; };
 		AC9D9BD9CC75AE617E2E35C1 /* Pods_MyPocketMoneyManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C2DAD4BEBA6BE79A94A43D /* Pods_MyPocketMoneyManager.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +31,7 @@
 /* Begin PBXFileReference section */
 		0C5E8F5CE39EFF1EF3293036 /* Pods-MyPocketMoneyManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPocketMoneyManager.release.xcconfig"; path = "Target Support Files/Pods-MyPocketMoneyManager/Pods-MyPocketMoneyManager.release.xcconfig"; sourceTree = "<group>"; };
 		2E1FDBFA28A8781B00F24114 /* HistoryYearUITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryYearUITableViewController.swift; sourceTree = "<group>"; };
+		2E59BD4228B1B7DB008B5A6F /* SpendingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingDetailViewController.swift; sourceTree = "<group>"; };
 		2E625D5C28A1EFC40007CD54 /* RegisterMoneyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMoneyTableViewController.swift; sourceTree = "<group>"; };
 		2E625D5E28A207CD0007CD54 /* RegisterMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMoneyViewController.swift; sourceTree = "<group>"; };
 		2E625D7928A21C160007CD54 /* SpendingDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingDao.swift; sourceTree = "<group>"; };
@@ -43,6 +47,8 @@
 		2E713F3028A0C96A00D3C7E8 /* TagListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListTableViewController.swift; sourceTree = "<group>"; };
 		2EB55BB228A247D500D3F948 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		2EB55BBF28A34E6800D3F948 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		2EBE77F228C34B89002E8CD4 /* SpendingDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingDto.swift; sourceTree = "<group>"; };
+		2ED144D528B1B1A900F2F762 /* HistoryMonthUITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMonthUITableViewController.swift; sourceTree = "<group>"; };
 		2EE0886728A1DE80006FF758 /* TagDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDao.swift; sourceTree = "<group>"; };
 		50AF99E93CA4B00F66FAD750 /* Pods-MyPcketMoneyManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPcketMoneyManager.debug.xcconfig"; path = "Target Support Files/Pods-MyPcketMoneyManager/Pods-MyPcketMoneyManager.debug.xcconfig"; sourceTree = "<group>"; };
 		7AC37F726BF94E2D2599715D /* Pods-MyPcketMoneyManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPcketMoneyManager.release.xcconfig"; path = "Target Support Files/Pods-MyPcketMoneyManager/Pods-MyPcketMoneyManager.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,6 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				2E1FDBFA28A8781B00F24114 /* HistoryYearUITableViewController.swift */,
+				2ED144D528B1B1A900F2F762 /* HistoryMonthUITableViewController.swift */,
+				2E59BD4228B1B7DB008B5A6F /* SpendingDetailViewController.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -110,6 +118,7 @@
 		2E713F2828A0B1DD00D3C7E8 /* Dao */ = {
 			isa = PBXGroup;
 			children = (
+				2EBE77F128C34B73002E8CD4 /* Dto */,
 				2EE0886728A1DE80006FF758 /* TagDao.swift */,
 				2E625D7928A21C160007CD54 /* SpendingDao.swift */,
 			);
@@ -151,6 +160,14 @@
 				2EB55BBF28A34E6800D3F948 /* DateUtils.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		2EBE77F128C34B73002E8CD4 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				2EBE77F228C34B89002E8CD4 /* SpendingDto.swift */,
+			);
+			path = Dto;
 			sourceTree = "<group>";
 		};
 		8825707FBC00643DE6F12561 /* Frameworks */ = {
@@ -294,9 +311,12 @@
 				2E713F1228A0A84200D3C7E8 /* AppDelegate.swift in Sources */,
 				2EE0886828A1DE80006FF758 /* TagDao.swift in Sources */,
 				2E713F3128A0C96A00D3C7E8 /* TagListTableViewController.swift in Sources */,
+				2ED144D628B1B1A900F2F762 /* HistoryMonthUITableViewController.swift in Sources */,
 				2EB55BB328A247D500D3F948 /* SettingTableViewController.swift in Sources */,
 				2E713F2B28A0B64400D3C7E8 /* RegisterTagViewController.swift in Sources */,
 				2E713F1C28A0A84200D3C7E8 /* MyPocketMoneyManager.xcdatamodeld in Sources */,
+				2EBE77F328C34B89002E8CD4 /* SpendingDto.swift in Sources */,
+				2E59BD4328B1B7DB008B5A6F /* SpendingDetailViewController.swift in Sources */,
 				2E625D7A28A21C160007CD54 /* SpendingDao.swift in Sources */,
 				2E713F1428A0A84200D3C7E8 /* SceneDelegate.swift in Sources */,
 				2E625D5D28A1EFC40007CD54 /* RegisterMoneyTableViewController.swift in Sources */,
@@ -449,6 +469,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6KK4X5W5E4;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 i386";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyPocketMoneyManager/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "俺の小遣い帳";
@@ -480,6 +502,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6KK4X5W5E4;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 i386";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyPocketMoneyManager/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "俺の小遣い帳";

@@ -42,16 +42,63 @@ class SpendingDao {
         return result
     }
     
-    public func getAllMonth() -> [Int16] {
+    public func getAllMonth(year: Int16) -> [Int16] {
         var result: [Int16] = []
         
-        let spendings = getAll()
+        
+        let fetchRequest = Spending.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "month", ascending: true)]
+        fetchRequest.predicate = NSPredicate(format: "year = %d", year)
+        var spendings: [Spending] = []
+        do {
+            spendings = try context.fetch(Spending.fetchRequest())
+        } catch {
+            print ("error")
+        }
         for spending in spendings {
             if !result.contains(spending.month) {
                 result.append(spending.month)
             }
         }
         return result
+    }
+    
+    public func getTotalAmountPerTags(year: Int16, month: Int16) -> [SpendingDto] {
+        var resultList: [SpendingDto] = []
+        let expressionAmountName = "amount"
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
+        
+        let entityDescription = NSEntityDescription.entity(forEntityName: "Spending", in: context)
+        fetchRequest.entity = entityDescription
+        
+        let keyPathExpression = NSExpression(forKeyPath: "amount")
+        let expression = NSExpression(forFunction: "sum:", arguments: [keyPathExpression])
+        let expressionDescription = NSExpressionDescription()
+        expressionDescription.name = expressionAmountName
+        expressionDescription.expression = expression
+        expressionDescription.expressionResultType = NSAttributeType.integer32AttributeType
+        
+        fetchRequest.resultType = NSFetchRequestResultType.dictionaryResultType
+        fetchRequest.propertiesToFetch = [expressionDescription, "tagName"]
+        fetchRequest.propertiesToGroupBy = ["tagName"]
+        fetchRequest.predicate = NSPredicate(format: "year = %d and month = %d", year, month)
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            for obj: AnyObject in results {
+                let tagName = obj.value(forKey: "tagName") as? String
+                let amount = obj.value(forKey: expressionAmountName) as? Int32
+                let spendingDto = SpendingDto()
+                spendingDto.tagName = tagName!
+                spendingDto.totalAmount = amount!
+                resultList.append(spendingDto)
+            }
+        } catch {
+            print("error")
+        }
+        
+        return resultList
     }
     
     public func getTotalAmountThisMonth() -> Int {

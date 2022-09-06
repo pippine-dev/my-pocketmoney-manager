@@ -7,5 +7,4 @@ target 'MyPocketMoneyManager' do
 
   # Pods for MyPocketMoneyManager
   pod 'NendSDK_iOS'
-
 end
